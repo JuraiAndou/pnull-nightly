@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Ball/Ball.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Walls/Walls.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Entities.gd" type="Script" id=4]
+[ext_resource path="res://assets/Level/Stage_01.png" type="Texture" id=5]
 
 [node name="World" type="Node"]
+
+[node name="BackGround" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+centered = false
 
 [node name="Walls" type="Node" parent="."]
 
@@ -15,8 +20,10 @@
 script = ExtResource( 4 )
 
 [node name="Player" parent="Entities" instance=ExtResource( 1 )]
-position = Vector2( 338.897, 373.096 )
+position = Vector2( 336, 357.941 )
 speed = 300
 
 [node name="Ball" parent="Entities" instance=ExtResource( 2 )]
 position = Vector2( 165.707, 150.562 )
+
+[connection signal="mySignal" from="Entities/Player" to="Entities/Ball" method="_on_Player_mySignal"]

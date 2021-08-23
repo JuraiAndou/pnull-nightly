@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bola.png-24f0b7aef99903620f97271d38e4ca87.stex"
+path="res://.import/sprite_idle _1.png-2ab7502822d82e9c91807ded92a4fb08.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ball/Bola.png"
-dest_files=[ "res://.import/Bola.png-24f0b7aef99903620f97271d38e4ca87.stex" ]
+source_file="res://assets/player/sprite_idle _1.png"
+dest_files=[ "res://.import/sprite_idle _1.png-2ab7502822d82e9c91807ded92a4fb08.stex" ]
 
 [params]
 
