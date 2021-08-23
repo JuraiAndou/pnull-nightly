@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 export var speed = 250
 var screen_size
+signal mySignal
+onready var up_hit = get_node("Player_hit_up")
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -26,3 +28,9 @@ func _process(delta):
 	
 func _physics_process(delta):
 	input(delta)
+
+
+func _on_Player_hit_up_body_shape_entered(body_id, body, body_shape, local_shape):
+	print(body.name)
+	if(body.name == "Ball"):
+		emit_signal("mySignal")
