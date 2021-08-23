@@ -18,8 +18,8 @@ func input(delta):
 func moviment(delta, velocity):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		
-	move_and_slide(velocity)
+			
+	move_and_collide(velocity * delta)
 
 func _process(delta):
 	pass

@@ -11,8 +11,13 @@ config_version=4
 [application]
 
 config/name="Project Null"
-run/main_scene="res://src/world.tscn"
+run/main_scene="res://src/World.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=680
+window/size/height=390
 
 [physics]
 
