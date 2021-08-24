@@ -18,12 +18,13 @@ func _physics_process(delta):
 	if position.y < maxHeight and spd >0:
 		mov.y += 0.02
 	if upKick:
+		mov.y = - 1
 		mov.x = -mov.x
 		if mov.y > 0:
 			mov.y = -mov.y
 		if spd < 700:
 			spd = spd + 200
-			maxHeight -= 140
+			maxHeight -= 190
 		upKick = false
 	
 	#colisões
