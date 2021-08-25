@@ -13,6 +13,7 @@ extents = Vector2( 10, 224 )
 extents = Vector2( 10, 224 )
 
 [node name="Outer_walls" type="Node"]
+editor/display_folded = true
 
 [node name="WallTop" type="StaticBody2D" parent="."]
 __meta__ = {

@@ -1,15 +1,15 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://src/player/Player.gd" type="Script" id=2]
-[ext_resource path="res://assets/collisionBox/Sprite-0001.png" type="Texture" id=3]
-[ext_resource path="res://assets/player/sprite_idle _1.png" type="Texture" id=4]
+[ext_resource path="res://src/player/Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/collisionBox/Sprite-0001.png" type="Texture" id=2]
+[ext_resource path="res://assets/player/player_idle_0.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 38.3071, 50.4798 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
@@ -19,23 +19,22 @@ animations = [ {
 extents = Vector2( 3.14597, 3.32178 )
 
 [node name="Player" type="KinematicBody2D"]
-process_priority = 1
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 
 [node name="Player_hit_up" type="Area2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="Player_hit_up"]
 position = Vector2( -0.066215, -18.5733 )
 scale = Vector2( 76.7381, 101.277 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player_hit_up"]
 position = Vector2( -0.176773, -18.5245 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -0.0625, 0.0625 )
-frames = SubResource( 5 )
+frames = SubResource( 2 )
 animation = "idle"
 __meta__ = {
 "_edit_lock_": true
@@ -47,5 +46,4 @@ disabled = true
 __meta__ = {
 "_edit_lock_": true
 }
-
 [connection signal="body_shape_entered" from="Player_hit_up" to="." method="_on_Player_hit_up_body_shape_entered"]

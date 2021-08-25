@@ -15,6 +15,8 @@ func _physics_process(delta):
 	#gravidade
 	if position.y < maxHeight and spd >0:
 		mov.y += 0.02
+	
+	#chute
 	if upKick:
 		mov.y = - 1
 		mov.x = -mov.x
