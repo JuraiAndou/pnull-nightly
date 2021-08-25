@@ -10,8 +10,6 @@ func _ready():
 	tela = get_viewport_rect().size
 	
 func _physics_process(delta):
-	print("MaxHeight: " + str(maxHeight))
-	print("speed: " + str(spd))
 	var collision = move_and_collide(mov * spd * delta)
 	
 	#gravidade
