@@ -11,11 +11,7 @@ var LEFT = false
 var RIGHT = false
 var KICK = false
 
-func _init():
-	self.test = "oi"
-
 func _process(delta):
-	print(self.test)
 	_get_input()
 
 #input handler funciton
@@ -40,6 +36,7 @@ func _move_and_collide(delta):
 		velocity.x -= 1
 	if RIGHT:
 		velocity.x += 1
+		
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 	
