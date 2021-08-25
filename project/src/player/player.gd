@@ -7,19 +7,28 @@ onready var up_hit = get_node("Player_hit_up")
 
 var player_input = null
 
+var LEFT = false
+var RIGHT = false
+var KICK = false
+
+func _init():
+	self.test = "oi"
+
 func _process(delta):
-	player_input = _get_input()
+	print(self.test)
+	_get_input()
 
 #input handler funciton
 func _get_input():
-	var current_input = null
-	if(Input.is_action_pressed("ui_kick")):
-		current_input = "KICK"
+	LEFT = false
+	RIGHT = false
+	KICK = false
 	if(Input.is_action_pressed("ui_left")):
-		current_input = "LEFT"
+		LEFT = true
 	if(Input.is_action_pressed("ui_right")):
-		current_input = "RIGHT"
-	return current_input
+		RIGHT = true
+	if(Input.is_action_pressed("ui_kick")):
+		KICK = true
 	
 func _physics_process(delta):
 	_move_and_collide(delta)
@@ -27,9 +36,9 @@ func _physics_process(delta):
 #moviment handler function
 func _move_and_collide(delta):
 	var velocity = Vector2.ZERO
-	if player_input == "LEFT":
+	if LEFT:
 		velocity.x -= 1
-	if player_input == "RIGHT":
+	if RIGHT:
 		velocity.x += 1
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
