@@ -46,4 +46,5 @@ disabled = true
 __meta__ = {
 "_edit_lock_": true
 }
+
 [connection signal="body_shape_entered" from="Player_hit_up" to="." method="_on_Player_hit_up_body_shape_entered"]

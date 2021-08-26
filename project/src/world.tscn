@@ -25,4 +25,3 @@ speed = 300
 
 [node name="Ball" parent="Entities" instance=ExtResource( 5 )]
 position = Vector2( 165.707, 150.562 )
-[connection signal="mySignal" from="Entities/Player" to="Entities/Ball" method="_on_Player_mySignal"]
