@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Som de navegação.wav-559bd9962de2e7cce38672e458754b4f.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/Som de navegação.wav"
+dest_files=[ "res://.import/Som de navegação.wav-559bd9962de2e7cce38672e458754b4f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

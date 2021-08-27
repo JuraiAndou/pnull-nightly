@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/Level/Stage_01.png" type="Texture" id=1]
+[ext_resource path="res://assets/Sprites/Level/Stage_01.png" type="Texture" id=1]
 [ext_resource path="res://src/Walls/Walls.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Entities.gd" type="Script" id=3]
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=4]
@@ -9,6 +9,8 @@
 [node name="World" type="Node"]
 
 [node name="BackGround" type="Sprite" parent="."]
+position = Vector2( -0.899582, 0 )
+scale = Vector2( 1.47346, 1.47346 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -20,8 +22,8 @@ centered = false
 script = ExtResource( 3 )
 
 [node name="Player" parent="Entities" instance=ExtResource( 4 )]
-position = Vector2( 336, 357.941 )
+position = Vector2( 514.394, 542.983 )
 speed = 300
 
 [node name="Ball" parent="Entities" instance=ExtResource( 5 )]
-position = Vector2( 165.707, 150.562 )
+position = Vector2( 215.345, 500.733 )

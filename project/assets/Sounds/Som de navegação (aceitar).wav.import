@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Som de navegação (aceitar).wav-a871b2d8579d827d7d51a6b8234c5169.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/Som de navegação (aceitar).wav"
+dest_files=[ "res://.import/Som de navegação (aceitar).wav-a871b2d8579d827d7d51a6b8234c5169.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

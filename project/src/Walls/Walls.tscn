@@ -1,19 +1,18 @@
 [gd_scene load_steps=5 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 352, 10 )
+extents = Vector2( 514.445, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 352, 10 )
+extents = Vector2( 536.484, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 10, 224 )
+extents = Vector2( 10, 305.425 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 10, 224 )
+extents = Vector2( 10, 299.084 )
 
 [node name="Outer_walls" type="Node"]
-editor/display_folded = true
 
 [node name="WallTop" type="StaticBody2D" parent="."]
 __meta__ = {
@@ -21,7 +20,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop"]
-position = Vector2( 344, -8 )
+position = Vector2( 492.621, -10 )
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_lock_": true
@@ -33,8 +32,11 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom"]
-position = Vector2( 336, 400 )
+position = Vector2( 491.198, 585.001 )
 shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="WallLeft" type="StaticBody2D" parent="."]
 __meta__ = {
@@ -42,7 +44,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
-position = Vector2( -10.2475, 193.242 )
+position = Vector2( -10.2475, 288.877 )
 shape = SubResource( 3 )
 __meta__ = {
 "_edit_lock_": true
@@ -54,7 +56,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
-position = Vector2( 690.52, 199.251 )
+position = Vector2( 1010.03, 286.085 )
 shape = SubResource( 4 )
 __meta__ = {
 "_edit_lock_": true
