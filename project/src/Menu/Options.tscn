@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Sprites/Menu/item_start.png" type="Texture" id=1]
+[ext_resource path="res://assets/Sprites/Menu/item_controles.png" type="Texture" id=2]
+[ext_resource path="res://assets/Sprites/Menu/item_quit.png" type="Texture" id=3]
+[ext_resource path="res://src/Menu/pointer.tscn" type="PackedScene" id=4]
+
+[node name="Options" type="Node2D"]
+
+[node name="Start" type="Node2D" parent="."]
+position = Vector2( 77.041, 460 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Start"]
+position = Vector2( 106.366, 42.0912 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Controls" type="Node2D" parent="."]
+position = Vector2( 360.839, 460 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Controls"]
+position = Vector2( 177.814, 42.0912 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Quit" type="Node2D" parent="."]
+position = Vector2( 783.256, 460 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Quit"]
+position = Vector2( 84.319, 41.6962 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pointer" parent="." instance=ExtResource( 4 )]

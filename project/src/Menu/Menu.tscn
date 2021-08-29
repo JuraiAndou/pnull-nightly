@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Sprites/Menu/tela_menu_0.png" type="Texture" id=2]
@@ -8,17 +8,10 @@
 [ext_resource path="res://assets/Sprites/Menu/tela_menu_4.png" type="Texture" id=6]
 [ext_resource path="res://assets/Sprites/Menu/tela_menu_5.png" type="Texture" id=7]
 [ext_resource path="res://assets/Sprites/Menu/tela_menu_6.png" type="Texture" id=8]
-[ext_resource path="res://assets/Sprites/Menu/item_start.png" type="Texture" id=9]
-[ext_resource path="res://assets/Sprites/Menu/item_controles.png" type="Texture" id=10]
-[ext_resource path="res://assets/Sprites/Menu/item_quit.png" type="Texture" id=11]
-[ext_resource path="res://assets/Sprites/Menu/icon_01.png" type="Texture" id=12]
-[ext_resource path="res://assets/Sprites/Menu/icon_02.png" type="Texture" id=13]
-[ext_resource path="res://assets/Sprites/Menu/icon_03.png" type="Texture" id=14]
-[ext_resource path="res://assets/Sprites/Menu/icon_04.png" type="Texture" id=15]
-[ext_resource path="res://assets/Sprites/Menu/icon_05.png" type="Texture" id=16]
-[ext_resource path="res://assets/Sprites/Menu/icon_07.png" type="Texture" id=17]
-[ext_resource path="res://assets/Sprites/Menu/icon_08.png" type="Texture" id=18]
-[ext_resource path="res://assets/Sprites/Menu/icon_09.png" type="Texture" id=19]
+[ext_resource path="res://src/Menu/Start.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Menu/Options.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/ObserverSound/AudioControllerMenu.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Menu/tela_controles.tscn" type="PackedScene" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -26,14 +19,6 @@ animations = [ {
 "loop": true,
 "name": "default",
 "speed": 16.0
-} ]
-
-[sub_resource type="SpriteFrames" id=2]
-animations = [ {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
-"loop": true,
-"name": "default",
-"speed": 14.0
 } ]
 
 [node name="Menu" type="Node2D"]
@@ -47,55 +32,17 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Options" type="Node" parent="."]
+[node name="Start" parent="." instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 0, 0 )
 
-[node name="Start" type="Node2D" parent="Options"]
-position = Vector2( 77.041, 460 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Options" parent="." instance=ExtResource( 10 )]
+visible = false
 
-[node name="Sprite" type="Sprite" parent="Options/Start"]
-position = Vector2( 106.366, 42.0912 )
-texture = ExtResource( 9 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="AudioControllerMenu" parent="." instance=ExtResource( 11 )]
+visible = false
 
-[node name="Controls" type="Node2D" parent="Options"]
-position = Vector2( 360.839, 460 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="tela_controles" parent="." instance=ExtResource( 12 )]
+visible = false
 
-[node name="Sprite" type="Sprite" parent="Options/Controls"]
-position = Vector2( 177.814, 42.0912 )
-texture = ExtResource( 10 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Quit" type="Node2D" parent="Options"]
-position = Vector2( 783.256, 460 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Options/Quit"]
-position = Vector2( 84.319, 41.6962 )
-texture = ExtResource( 11 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="pointer" type="Node2D" parent="."]
-editor/display_folded = true
-position = Vector2( 50, 500 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="pointer"]
-frames = SubResource( 2 )
-frame = 6
-playing = true
+[connection signal="play_sound" from="." to="AudioControllerMenu" method="_on_Menu_play_sound"]
