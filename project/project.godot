@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Project Null"
-run/main_scene="res://src/Menu/Menu.tscn"
+run/main_scene="res://src/inicialização/Background.tscn"
 config/icon="res://icon.png"
 
 [display]

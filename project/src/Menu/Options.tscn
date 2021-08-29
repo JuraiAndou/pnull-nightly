@@ -21,26 +21,26 @@ __meta__ = {
 }
 
 [node name="Controls" type="Node2D" parent="."]
-position = Vector2( 360.839, 460 )
+position = Vector2( 359.839, 460 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Controls"]
-position = Vector2( 177.814, 42.0912 )
+position = Vector2( 169.814, 42.0912 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Quit" type="Node2D" parent="."]
-position = Vector2( 783.256, 460 )
+position = Vector2( 772.256, 460 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Quit"]
-position = Vector2( 84.319, 41.6962 )
+position = Vector2( 96.319, 41.6962 )
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
