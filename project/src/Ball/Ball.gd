@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 var mov = Vector2(1,-1)
-var spd = 300
-var maxHeight = 200
+var spd = 400
+var maxHeight = 300
 var tela
 var upKick = false
 
@@ -24,7 +24,7 @@ func _physics_process(delta):
 			mov.y = -mov.y
 		if spd < 700:
 			spd = spd + 200
-			maxHeight -= 190
+			maxHeight -= 220
 		upKick = false
 	
 	#colisões
@@ -38,7 +38,7 @@ func _physics_process(delta):
 			if spd > 0:
 				spd = spd - 100
 				if spd >= 0:
-					maxHeight += 90
+					maxHeight += 110
 		#if collision.collider.name == "Player":
 			#mov.y = -mov.y
 			#mov.x = -mov.x

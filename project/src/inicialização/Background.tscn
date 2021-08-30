@@ -63,7 +63,6 @@ __meta__ = {
 }
 
 [node name="logo_ufc" type="TextureRect" parent="."]
-visible = false
 margin_left = 234.935
 margin_top = 182.726
 margin_right = 749.935
@@ -75,12 +74,16 @@ __meta__ = {
 }
 
 [node name="logo_smd" type="TextureRect" parent="."]
+visible = false
 margin_left = 347.874
 margin_top = 175.917
 margin_right = 657.874
 margin_bottom = 413.917
 texture = ExtResource( 2 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Fade" type="ColorRect" parent="."]
 margin_right = 1008.0

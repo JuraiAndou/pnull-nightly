@@ -27,7 +27,7 @@ script = ExtResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 500, 287.547 )
 frames = SubResource( 1 )
-frame = 6
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -37,7 +37,6 @@ __meta__ = {
 visible = false
 
 [node name="Start" parent="." instance=ExtResource( 9 )]
-visible = false
 position = Vector2( 0, 0 )
 
 [node name="Options" parent="." instance=ExtResource( 10 )]
