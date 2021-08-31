@@ -9,3 +9,4 @@ build/
 
 # Mono-specific ignores
 .mono/
+*.import

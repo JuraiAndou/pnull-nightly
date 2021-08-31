@@ -27,7 +27,6 @@ script = ExtResource( 3 )
 
 [node name="Player" parent="Entities" instance=ExtResource( 4 )]
 position = Vector2( 514.394, 542.983 )
-speed = 300
 
 [node name="Ball" parent="Entities" instance=ExtResource( 5 )]
 position = Vector2( 215.345, 500.733 )
