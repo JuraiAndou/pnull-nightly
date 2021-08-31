@@ -19,17 +19,6 @@ func _physics_process(delta):
 	if position.y < maxHeight and spd >0:
 		mov.y += 0.02
 	
-	#chute
-	if upKick:
-		mov.y = - 1
-		mov.x = -mov.x
-		if mov.y > 0:
-			mov.y = -mov.y
-		if spd < 700:
-			spd = spd + 200
-			maxHeight -= 220
-		upKick = false
-	
 	#colisões
 	if collision:
 		#emite som enquanto esá com velocidade
@@ -46,15 +35,23 @@ func _physics_process(delta):
 				spd = spd - 100
 				if spd >= 0:
 					maxHeight += 110
-		#if collision.collider.name == "Player":
-			#mov.y = -mov.y
-			#mov.x = -mov.x
+		if collision.collider.name == "Player" and upKick:
+			mov.y = - 1
+			mov.x = -mov.x
+			if mov.y > 0:
+				mov.y = -mov.y
+			if spd < 700:
+				spd = spd + 200
+				maxHeight -= 220
+			upKick = false
+		elif collision.collider.name == "Player":
+			mov.y = -mov.y
+			mov.x = -mov.x
 	
 	#zera a velocidade caso pare no chão
 	if maxHeight >= tela.y + maxHeight:
 		spd = 0
 
 
-func _on_Player_mySignal():
+func _on_Player_up_kick_signal():
 	upKick = true
-	print("colidiu")
