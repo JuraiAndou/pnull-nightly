@@ -78,8 +78,7 @@ func _walk_state(delta):
 	current_state = _check_walk_state()
 
 func _kick_up_state(delta):
-	if KICK:
-		print("kicking")
+	emit_signal("up_kick_signal")
 	
 
 func _check_idle_state():
@@ -93,8 +92,9 @@ func _check_idle_state():
 func _check_walk_state():
 	var _new_state = current_state
 	if (not LEFT) and (not RIGHT):
+		print("test")
 		_new_state = IDLE
-	if KICK_UP:
+	elif KICK:
 		_new_state = KICK
 	return _new_state
 
