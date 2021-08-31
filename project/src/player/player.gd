@@ -1,12 +1,14 @@
 extends KinematicBody2D
 
 export var speed = 500
+var lifes = 3
+var retries = 3
+
 var screen_size
 signal up_kick_signal
 onready var up_hit = get_node("Player_hit_up")
 
 var player_input = null
-
 var velocity = Vector2()
 
 var LEFT = false
@@ -78,7 +80,7 @@ func _walk_state(delta):
 func _kick_up_state(delta):
 	if KICK:
 		print("kicking")
-	pass
+	
 
 func _check_idle_state():
 	var _new_state = current_state

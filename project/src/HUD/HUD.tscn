@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://assets/Sprites/Componentes/vida.png" type="Texture" id=2]
+[ext_resource path="res://assets/Sprites/Componentes/retrie.png" type="Texture" id=3]
+[ext_resource path="res://assets/Fonte/Lady Radical.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 58
+font_data = ExtResource( 4 )
+
+[node name="HUD" type="CanvasLayer" groups=[
+"HUD",
+]]
+script = ExtResource( 1 )
+
+[node name="Vida" type="TextureRect" parent="."]
+margin_left = 13.4543
+margin_top = 6.72717
+margin_right = 56.4543
+margin_bottom = 49.7272
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Vida"]
+margin_left = 54.0
+margin_top = -13.0
+margin_right = 82.0
+margin_bottom = 66.0
+rect_pivot_offset = Vector2( -132.078, 2.83866 )
+custom_fonts/font = SubResource( 1 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Retrie" type="TextureRect" parent="."]
+margin_left = 13.4543
+margin_top = 55.0787
+margin_right = 56.4543
+margin_bottom = 98.0787
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Retrie"]
+margin_left = 53.5606
+margin_top = -11.8611
+margin_right = 81.5606
+margin_bottom = 67.1389
+rect_pivot_offset = Vector2( -132.078, 2.83866 )
+custom_fonts/font = SubResource( 1 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="."]
+margin_left = 776.0
+margin_top = -5.12241
+margin_right = 986.0
+margin_bottom = 73.8776
+rect_pivot_offset = Vector2( -132.078, 2.83866 )
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}

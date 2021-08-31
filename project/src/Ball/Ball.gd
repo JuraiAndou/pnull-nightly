@@ -6,6 +6,9 @@ var maxHeight = 300
 var tela
 var upKick = false
 
+signal play_sound ()
+
+
 func _ready():
 	tela = get_viewport_rect().size
 	
@@ -29,6 +32,10 @@ func _physics_process(delta):
 	
 	#colisões
 	if collision:
+		#emite som enquanto esá com velocidade
+		if spd > 0:
+			emit_signal("play_sound")
+			
 		if collision.collider.name == "WallLeft" or collision.collider.name == "WallRight":
 			mov.x = -mov.x
 		if collision.collider.name == "WallTop":
@@ -43,7 +50,7 @@ func _physics_process(delta):
 			#mov.y = -mov.y
 			#mov.x = -mov.x
 	
-	#zera a velocidade caso a bola fique mt proxima ao chão
+	#zera a velocidade caso pare no chão
 	if maxHeight >= tela.y + maxHeight:
 		spd = 0
 

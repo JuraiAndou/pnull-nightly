@@ -1,0 +1,158 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/Sprites/Level/Stage_01.png" type="Texture" id=1]
+[ext_resource path="res://src/Stage1.gd" type="Script" id=2]
+[ext_resource path="res://src/Entities.gd" type="Script" id=3]
+[ext_resource path="res://src/Walls/Walls.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Ball/Ball.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Inimigo/Inimigo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/ObserverSound/AudioController.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/HUD/HUD.tscn" type="PackedScene" id=9]
+
+[node name="World" type="Node"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 233.0 ]
+}
+
+[node name="HUD" parent="." instance=ExtResource( 9 )]
+
+[node name="BackGround" type="Sprite" parent="."]
+position = Vector2( -1.3205, -0.707108 )
+scale = Vector2( 1.47663, 1.47663 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="AudioControllerMenu" parent="." instance=ExtResource( 8 )]
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Outer_walls" parent="Walls" instance=ExtResource( 4 )]
+
+[node name="Entities" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="Player" parent="Entities" instance=ExtResource( 5 )]
+position = Vector2( 514.394, 542.983 )
+
+[node name="Ball" parent="Entities" instance=ExtResource( 6 )]
+position = Vector2( 215.345, 500.733 )
+
+[node name="Inimigos" type="Node" parent="."]
+
+[node name="Linha1" type="Node" parent="Inimigos"]
+
+[node name="Inimigo" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 73.08, 178.291 )
+
+[node name="Inimigo2" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 182.841, 116.291 )
+
+[node name="Inimigo3" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 248.249, 116.291 )
+
+[node name="Inimigo4" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 336.637, 153.767 )
+
+[node name="Inimigo5" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 400.739, 153.767 )
+
+[node name="Inimigo6" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 443.165, 102.149 )
+
+[node name="Inimigo7" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 559.484, 100.027 )
+
+[node name="Inimigo8" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 597.668, 153.767 )
+
+[node name="Inimigo9" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 665.023, 153.767 )
+
+[node name="Inimigo10" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 756.947, 116.291 )
+
+[node name="Inimigo11" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 822.355, 116.291 )
+
+[node name="Inimigo12" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
+position = Vector2( 925.116, 174.291 )
+
+[node name="Linha 2" type="Node" parent="Inimigos"]
+
+[node name="Inimigo" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 145.072, 178.951 )
+
+[node name="Inimigo2" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 205.469, 217.951 )
+
+[node name="Inimigo3" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 270.876, 217.951 )
+
+[node name="Inimigo4" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 336.637, 217.951 )
+
+[node name="Inimigo5" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 400.739, 217.951 )
+
+[node name="Inimigo6" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 466.5, 188.252 )
+
+[node name="Inimigo7" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 531.907, 188.252 )
+
+[node name="Inimigo8" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 597.668, 217.951 )
+
+[node name="Inimigo9" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 665.023, 217.951 )
+
+[node name="Inimigo10" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 730.784, 217.951 )
+
+[node name="Inimigo11" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 796.192, 217.951 )
+
+[node name="Inimigo12" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+position = Vector2( 856.748, 174.951 )
+
+[node name="Linha 3" type="Node" parent="Inimigos"]
+
+[node name="Inimigo" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 105.708, 381.111 )
+
+[node name="Inimigo2" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 172.469, 334.134 )
+
+[node name="Inimigo3" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 237.876, 334.134 )
+
+[node name="Inimigo4" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 336.637, 282.134 )
+
+[node name="Inimigo5" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 400.739, 331.632 )
+
+[node name="Inimigo6" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 465.793, 363.452 )
+
+[node name="Inimigo7" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 531.907, 363.452 )
+
+[node name="Inimigo8" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 597.668, 331.632 )
+
+[node name="Inimigo9" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 665.023, 282.134 )
+
+[node name="Inimigo10" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 767.785, 335.134 )
+
+[node name="Inimigo11" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 833.192, 336.134 )
+
+[node name="Inimigo12" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+position = Vector2( 897.953, 386.111 )
+
+[connection signal="play_sound" from="." to="AudioControllerMenu" method="_on_World_play_sound"]

@@ -3,8 +3,18 @@ extends Node2D
 func _on_Menu_play_sound(som):
 	match som:
 		'menu':
-			$menu_theme.play()
+			$Menu/theme.play()
 		'accept':
-			$menu_accept.play()
+			$Menu/accept.play()
 		'move':
-			$menu_move.play()
+			$Menu/move.play()
+
+
+
+
+func _on_Ball_play_sound():
+	$Bola/quique.play()
+
+
+func _on_World_play_sound():
+	$Stages/Stage1.play()
