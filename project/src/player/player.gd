@@ -107,15 +107,6 @@ func _move_and_collide(delta):
 	move_and_collide(velocity * delta)
 
 
-#func _on_Player_hit_up_body_shape_entered(body_id, body, body_shape, local_shape):
-#	print(body.name)
-#	if(body.name == "Ball"):
-#		emit_signal("mySignal")
-
-func _on_Player_hit_up_body_shape_entered(body_id, body, body_shape, local_shape):
-	pass # Replace with function body.
-
-
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "Kicking":
 		current_state = IDLE
