@@ -27,7 +27,7 @@ func _process(delta):
 func _set_animation():
 	if velocity.x > 0:
 		$AnimatedSprite.flip_h = true
-	else:
+	elif velocity.x < 0:
 		$AnimatedSprite.flip_h = false
 
 	match current_state:
@@ -94,6 +94,8 @@ func _check_walk_state():
 	var _new_state = current_state
 	if (not LEFT) and (not RIGHT):
 		_new_state = IDLE
+	if KICK_UP:
+		_new_state = KICK
 	return _new_state
 
 func _check_kick_state():
@@ -112,3 +114,8 @@ func _move_and_collide(delta):
 
 func _on_Player_hit_up_body_shape_entered(body_id, body, body_shape, local_shape):
 	pass # Replace with function body.
+
+
+func _on_AnimatedSprite_animation_finished():
+	if $AnimatedSprite.animation == "Kicking":
+		current_state = IDLE
