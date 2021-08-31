@@ -31,7 +31,7 @@ func menuPrincipal():
 		match itemSelected:
 			0:	
 				emit_signal("play_sound", "accept")
-				get_tree().change_scene("res://src/Stage1.tscn")
+				get_tree().change_scene("res://src/Intro/intro.tscn")
 			1:
 				emit_signal("play_sound", "accept")
 				menuStage = 2 

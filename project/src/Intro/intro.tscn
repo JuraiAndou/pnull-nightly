@@ -1,0 +1,194 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Sounds/Musica Intro.mp3" type="AudioStream" id=1]
+[ext_resource path="res://src/Intro/intro.gd" type="Script" id=2]
+[ext_resource path="res://assets/Fonte/Lady Radical.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Intro"
+length = 21.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 5, 6, 7, 11, 12, 13, 18.9, 19.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cena 1/Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("cena 1/Label2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cena 2/Label:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 6, 11.9946 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Cena 3/Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 3 )
+
+[node name="intro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fundo" type="ColorRect" parent="."]
+margin_right = 1004.0
+margin_bottom = 589.0
+rect_pivot_offset = Vector2( -881.103, -327.915 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cena 1" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="cena 1"]
+margin_left = 87.0
+margin_top = 187.075
+margin_right = 933.0
+margin_bottom = 290.075
+rect_pivot_offset = Vector2( 564.962, 143.005 )
+custom_fonts/font = SubResource( 1 )
+text = "Estamos no ano de 1980, a humanidade alcançou o apice tecnologica."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="cena 1"]
+margin_left = 87.9781
+margin_top = 307.094
+margin_right = 933.978
+margin_bottom = 410.094
+rect_pivot_offset = Vector2( 564.962, 143.005 )
+custom_fonts/font = SubResource( 1 )
+text = "Porem devido a incapacidade dos governantes mundiais, as maquinas se revoltaram contra a humanidade......"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cena 2" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Cena 2"]
+visible = false
+margin_left = 79.5647
+margin_top = 214.84
+margin_right = 925.565
+margin_bottom = 370.84
+rect_pivot_offset = Vector2( 564.962, 143.005 )
+custom_fonts/font = SubResource( 1 )
+text = "Sendo assim, em meio ao caos, surge uma profecia que fala que um dia, um heroi vestido de amarelo e azul ira surgir e combater o mundo atual..... "
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cena 3" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Cena 3"]
+visible = false
+margin_left = 76.0671
+margin_top = 187.229
+margin_right = 922.067
+margin_bottom = 449.229
+rect_pivot_offset = Vector2( 564.962, 143.005 )
+custom_fonts/font = SubResource( 1 )
+text = "3 anos se passam e esse heroi surge e o objetivo do heroi e exterminar todas as maquinas com sua bola dente de leite, com a ajuda de seu mentor, que outrora foi um grande heroi da humanidade.
+"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Intro"
+anims/Intro = SubResource( 2 )
+
+[node name="fade" type="ColorRect" parent="AnimationPlayer"]
+margin_right = 1004.0
+margin_bottom = 589.0
+rect_pivot_offset = Vector2( -881.103, -327.915 )
+color = Color( 0, 0, 0, 0.6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="AnimationPlayer/fade"]
+modulate = Color( 1, 1, 1, 0.0666667 )
+margin_left = 137.141
+margin_top = 535.279
+margin_right = 983.141
+margin_bottom = 797.279
+rect_pivot_offset = Vector2( 564.962, 143.005 )
+custom_fonts/font = SubResource( 3 )
+text = "press space to pass..."
+align = 2
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -20.048
+autoplay = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

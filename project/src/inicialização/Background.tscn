@@ -63,6 +63,7 @@ __meta__ = {
 }
 
 [node name="logo_ufc" type="TextureRect" parent="."]
+visible = false
 margin_left = 234.935
 margin_top = 182.726
 margin_right = 749.935
@@ -74,7 +75,6 @@ __meta__ = {
 }
 
 [node name="logo_smd" type="TextureRect" parent="."]
-visible = false
 margin_left = 347.874
 margin_top = 175.917
 margin_right = 657.874
@@ -88,7 +88,7 @@ __meta__ = {
 [node name="Fade" type="ColorRect" parent="."]
 margin_right = 1008.0
 margin_bottom = 581.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -49,6 +49,6 @@ color_ramp = SubResource( 2 )
 
 [node name="explosão" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-volume_db = -14.511
+volume_db = -17.0
 pitch_scale = 2.2
 autoplay = true
