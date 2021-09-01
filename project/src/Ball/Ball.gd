@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 var mov = Vector2(1,-1)
-var spd = 400
-var maxHeight = 300
+var spd = 300
+var maxHeight = 500
 var tela
 var upKick = false
 
@@ -21,7 +21,7 @@ func _physics_process(delta):
 	
 	#colisões
 	if collision:
-		#emite som enquanto esá com velocidade
+		#emite som enquanto está com velocidade
 		if spd > 0:
 			emit_signal("play_sound")
 			
@@ -34,15 +34,15 @@ func _physics_process(delta):
 			if spd > 0:
 				spd = spd - 100
 				if spd >= 0:
-					maxHeight += 110
+					maxHeight += 100
 		if collision.collider.name == "Player" and upKick:
 			mov.y = - 1
 			mov.x = -mov.x
 			if mov.y > 0:
 				mov.y = -mov.y
-			if spd < 700:
-				spd = spd + 200
-				maxHeight -= 220
+			if spd < 500:
+				spd = spd + 100
+				maxHeight -= 100
 			upKick = false
 		elif collision.collider.name == "Player":
 			mov.y = -mov.y
