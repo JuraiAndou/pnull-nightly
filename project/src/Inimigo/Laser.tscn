@@ -29,7 +29,6 @@ __meta__ = {
 position = Vector2( -0.0425758, -0.113842 )
 scale = Vector2( 1.40941, 1.40941 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 flip_v = true
 
@@ -41,3 +40,5 @@ shape = SubResource( 2 )
 stream = ExtResource( 4 )
 volume_db = -19.536
 autoplay = true
+
+[connection signal="body_entered" from="." to="." method="_on_Laser_body_entered"]

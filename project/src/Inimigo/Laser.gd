@@ -16,4 +16,6 @@ func _physics_process(delta):
 	#movimenta o tiro
 	translate(Vector2(0,1) * spd * delta)
 	
-	
+func _on_Laser_body_entered(body):
+	if body.name == "Player":
+		get_tree().call_group("player", "set_hit")

@@ -19,8 +19,12 @@ enum { WALK, KICK_UP, IDLE, HIT }
 
 var enter_state = false
 
+#sinais para o estado de chute
 signal up_kick_signal
 signal hit
+#sinal para o som
+signal play_sound (som)
+
 
 func _process(delta):
 	_get_input()
@@ -99,6 +103,7 @@ func _kick_up_state(delta):
 func _hit_state():
 	if enter_state:
 		lifes -= 1
+		emit_signal("play_sound", "hit")
 		emit_signal("hit")
 		enter_state = false
 
@@ -143,4 +148,7 @@ func _on_AnimatedSprite_animation_finished():
 		
 
 func _on_Ball_hit_player():
+	set_state(HIT)
+
+func set_hit():
 	set_state(HIT)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/ObserverSound/AudioController.gd" type="Script" id=1]
 [ext_resource path="res://assets/Sounds/Som de navegação (aceitar).wav" type="AudioStream" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://assets/Sounds/Musica menu inicial.mp3" type="AudioStream" id=4]
 [ext_resource path="res://assets/Sounds/Som de quique.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/Sounds/Musica gameplay.mp3" type="AudioStream" id=6]
+[ext_resource path="res://assets/Sounds/Som de chute.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/Sounds/Som de dano.wav" type="AudioStream" id=8]
 
 [node name="AudioControllerMenu" type="Node2D"]
 script = ExtResource( 1 )
@@ -32,8 +34,18 @@ stream = ExtResource( 5 )
 volume_db = -6.046
 pitch_scale = 1.95
 
+[node name="chute" type="AudioStreamPlayer" parent="Bola"]
+stream = ExtResource( 7 )
+volume_db = -13.783
+pitch_scale = 2.61
+
+[node name="hit" type="AudioStreamPlayer" parent="Bola"]
+stream = ExtResource( 8 )
+volume_db = -17.542
+pitch_scale = 1.86
+
 [node name="Stages" type="Node" parent="."]
 
 [node name="Stage1" type="AudioStreamPlayer" parent="Stages"]
 stream = ExtResource( 6 )
-volume_db = -22.976
+volume_db = -27.988
