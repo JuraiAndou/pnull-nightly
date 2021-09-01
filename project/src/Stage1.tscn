@@ -157,3 +157,4 @@ position = Vector2( 897.953, 386.111 )
 
 [connection signal="play_sound" from="." to="AudioControllerMenu" method="_on_World_play_sound"]
 [connection signal="up_kick_signal" from="Entities/Player" to="Entities/Ball" method="_on_Player_up_kick_signal"]
+[connection signal="hit_player" from="Entities/Ball" to="Entities/Player" method="_on_Ball_hit_player"]
