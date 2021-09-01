@@ -5,7 +5,6 @@ var lifes = 3
 var retries = 3
 
 var screen_size
-signal up_kick_signal
 onready var up_hit = get_node("Player_hit_up")
 
 var player_input = null
@@ -18,6 +17,10 @@ var KICK = false
 var current_state := 2
 enum { WALK, KICK_UP, IDLE, HIT }
 
+var enter_state = false
+
+signal up_kick_signal
+signal hit
 
 func _process(delta):
 	_get_input()
@@ -38,7 +41,7 @@ func _set_animation():
 		IDLE:
 			$AnimatedSprite.play("idle")
 		HIT:
-			pass
+			$AnimatedSprite.play("Hit")
 
 #input handler funciton
 func _get_input():
@@ -61,14 +64,20 @@ func _physics_process(delta):
 		IDLE:
 			_idle_state()
 		HIT:
-			pass
+			_hit_state()
 
 #State functions (O estado é corrúpto e imposto é roubo)
 func _idle_state():
+	if enter_state:
+		enter_state = false
+	
 	velocity.x = 0
 	set_state(_check_idle_state())
 
 func _walk_state(delta):
+	if enter_state:
+		enter_state = false
+	
 	velocity = Vector2.ZERO
 	if LEFT:
 		velocity.x -= 1
@@ -82,10 +91,18 @@ func _walk_state(delta):
 	set_state(_check_walk_state())
 
 func _kick_up_state(delta):
+	if enter_state:
+		enter_state = false
+	
 	emit_signal("up_kick_signal")
 
 func _hit_state():
-	pass
+	if enter_state:
+		lifes -= 1
+		emit_signal("hit")
+		enter_state = false
+	
+	set_state(_check_hit_state())
 
 #check Functions
 func _check_idle_state():
@@ -101,15 +118,16 @@ func _check_walk_state():
 	if (not LEFT) and (not RIGHT):
 		_new_state = IDLE
 	elif KICK:
-		_new_state = KICK
+		_new_state = KICK_UP
 	return _new_state
 
 func _check_kick_state():
-	var new_state = current_state
-	return new_state
+	var _new_state = current_state
+	return _new_state
 
 func _check_hit_state():
-	pass
+	var _new_state = current_state
+	return _new_state
 
 #moviment handler function
 func _move_and_collide(delta):
@@ -117,12 +135,14 @@ func _move_and_collide(delta):
 
 
 func set_state(_new_state):
+	if _new_state != current_state:
+		enter_state = true
 	current_state = _new_state
 
 func _on_AnimatedSprite_animation_finished():
-	if $AnimatedSprite.animation == "Kicking":
+	if $AnimatedSprite.animation == "Kicking" or $AnimatedSprite.animation == "Hit":
 		set_state(IDLE)
-
+		
 
 func _on_Ball_hit_player():
-	pass # Replace with function body.
+	set_state(HIT)

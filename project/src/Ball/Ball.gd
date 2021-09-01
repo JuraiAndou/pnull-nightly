@@ -45,6 +45,8 @@ func _physics_process(delta):
 				spd = spd + 100
 				maxHeight -= 150
 			upKick = false
+		elif upKick:
+			upKick = false
 		elif collision.collider.name == "Player":
 			mov.y = -mov.y
 			mov.x = -mov.x
