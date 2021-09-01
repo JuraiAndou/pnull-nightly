@@ -37,20 +37,20 @@ script = ExtResource( 3 )
 position = Vector2( 514.394, 542.983 )
 
 [node name="Ball" parent="Entities" instance=ExtResource( 6 )]
-position = Vector2( 215.345, 500.733 )
+position = Vector2( 513.863, 467.097 )
 
 [node name="Inimigos" type="Node" parent="."]
 
 [node name="Linha1" type="Node" parent="Inimigos"]
 
 [node name="Inimigo" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
-position = Vector2( 73.08, 178.291 )
+position = Vector2( 73.08, 156.964 )
 
 [node name="Inimigo2" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
-position = Vector2( 182.841, 116.291 )
+position = Vector2( 182.841, 94.9642 )
 
 [node name="Inimigo3" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
-position = Vector2( 248.249, 116.291 )
+position = Vector2( 248.249, 94.9642 )
 
 [node name="Inimigo4" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
 position = Vector2( 336.637, 153.767 )
@@ -59,10 +59,10 @@ position = Vector2( 336.637, 153.767 )
 position = Vector2( 400.739, 153.767 )
 
 [node name="Inimigo6" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
-position = Vector2( 443.165, 102.149 )
+position = Vector2( 443.165, 68.4752 )
 
 [node name="Inimigo7" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
-position = Vector2( 559.484, 100.027 )
+position = Vector2( 559.484, 66.3531 )
 
 [node name="Inimigo8" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
 position = Vector2( 597.668, 153.767 )
@@ -71,24 +71,24 @@ position = Vector2( 597.668, 153.767 )
 position = Vector2( 665.023, 153.767 )
 
 [node name="Inimigo10" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
-position = Vector2( 756.947, 116.291 )
+position = Vector2( 756.947, 94.9642 )
 
 [node name="Inimigo11" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
-position = Vector2( 822.355, 116.291 )
+position = Vector2( 822.355, 94.9642 )
 
 [node name="Inimigo12" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
-position = Vector2( 925.116, 174.291 )
+position = Vector2( 925.116, 152.964 )
 
 [node name="Linha2" type="Node" parent="Inimigos"]
 
 [node name="Inimigo" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
-position = Vector2( 145.072, 178.951 )
+position = Vector2( 145.072, 157.624 )
 
 [node name="Inimigo2" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
-position = Vector2( 205.469, 217.951 )
+position = Vector2( 205.469, 244.89 )
 
 [node name="Inimigo3" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
-position = Vector2( 270.876, 217.951 )
+position = Vector2( 270.876, 244.89 )
 
 [node name="Inimigo4" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 336.637, 217.951 )
@@ -109,13 +109,13 @@ position = Vector2( 597.668, 217.951 )
 position = Vector2( 665.023, 217.951 )
 
 [node name="Inimigo10" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
-position = Vector2( 730.784, 217.951 )
+position = Vector2( 730.784, 244.89 )
 
 [node name="Inimigo11" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
-position = Vector2( 796.192, 217.951 )
+position = Vector2( 796.192, 244.89 )
 
 [node name="Inimigo12" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
-position = Vector2( 856.748, 174.951 )
+position = Vector2( 856.748, 153.624 )
 
 [node name="Linha3" type="Node" parent="Inimigos"]
 
@@ -135,10 +135,10 @@ position = Vector2( 336.637, 282.134 )
 position = Vector2( 400.739, 331.632 )
 
 [node name="Inimigo6" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
-position = Vector2( 465.793, 363.452 )
+position = Vector2( 465.793, 288.886 )
 
 [node name="Inimigo7" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
-position = Vector2( 531.907, 363.452 )
+position = Vector2( 531.907, 288.886 )
 
 [node name="Inimigo8" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 597.668, 331.632 )
