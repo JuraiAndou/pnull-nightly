@@ -92,7 +92,6 @@ func _check_idle_state():
 func _check_walk_state():
 	var _new_state = current_state
 	if (not LEFT) and (not RIGHT):
-		print("test")
 		_new_state = IDLE
 	elif KICK:
 		_new_state = KICK

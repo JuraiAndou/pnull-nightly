@@ -6,7 +6,8 @@ var maxHeight = 500
 var tela
 var upKick = false
 
-signal play_sound ()
+signal play_sound()
+signal hit_player()
 
 
 func _ready():
@@ -47,6 +48,7 @@ func _physics_process(delta):
 		elif collision.collider.name == "Player":
 			mov.y = -mov.y
 			mov.x = -mov.x
+			emit_signal("hit_player")
 	
 	#zera a velocidade caso pare no chão
 	if maxHeight >= tela.y + maxHeight:
