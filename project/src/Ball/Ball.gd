@@ -34,7 +34,7 @@ func _physics_process(delta):
 			if spd > 0:
 				spd = spd - 100
 				if spd >= 0:
-					maxHeight += 100
+					maxHeight += 150
 		if collision.collider.name == "Player" and upKick:
 			mov.y = - 1
 			mov.x = -mov.x
@@ -42,7 +42,7 @@ func _physics_process(delta):
 				mov.y = -mov.y
 			if spd < 500:
 				spd = spd + 100
-				maxHeight -= 100
+				maxHeight -= 150
 			upKick = false
 		elif collision.collider.name == "Player":
 			mov.y = -mov.y
