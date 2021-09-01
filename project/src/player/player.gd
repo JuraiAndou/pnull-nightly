@@ -101,8 +101,6 @@ func _hit_state():
 		lifes -= 1
 		emit_signal("hit")
 		enter_state = false
-	
-	set_state(_check_hit_state())
 
 #check Functions
 func _check_idle_state():
@@ -131,7 +129,7 @@ func _check_hit_state():
 
 #moviment handler function
 func _move_and_collide(delta):
-	move_and_collide(velocity * delta)
+	var collide = move_and_collide(velocity * delta)
 
 
 func set_state(_new_state):
