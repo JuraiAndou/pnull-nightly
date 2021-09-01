@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://assets/Sprites/Componentes/vida.png" type="Texture" id=2]
+[ext_resource path="res://src/Telas finais/Winning.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Fonte/Lady Radical.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
@@ -11,6 +12,7 @@ font_data = ExtResource( 4 )
 [node name="HUD" type="CanvasLayer" groups=[
 "HUD",
 ]]
+pause_mode = 2
 script = ExtResource( 1 )
 
 [node name="Vida" type="TextureRect" parent="."]
@@ -48,3 +50,6 @@ align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="winning" parent="." instance=ExtResource( 3 )]
+visible = false

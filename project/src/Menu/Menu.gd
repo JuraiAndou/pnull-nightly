@@ -7,6 +7,7 @@ var itemSelected = 0
 signal play_sound (som)
 
 func _ready():
+	get_tree().paused = false
 	emit_signal("play_sound", "menu")
 
 #funcionamente do menu inicial

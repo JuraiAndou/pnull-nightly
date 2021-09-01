@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/Sprites/Menu/tela_menu_6.png" type="Texture" id=8]
 [ext_resource path="res://src/Menu/Start.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Menu/Options.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/ObserverSound/AudioController.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Observers/AudioController.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Menu/tela_controles.tscn" type="PackedScene" id=12]
 
 [sub_resource type="SpriteFrames" id=1]

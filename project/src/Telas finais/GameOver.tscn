@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/Sprites/player/Playerdeath_3.png" type="Texture" id=1]
+[ext_resource path="res://assets/Fonte/Lady Radical.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/Telas finais/GameOver.gd" type="Script" id=3]
+[ext_resource path="res://assets/Sounds/Som de Derrota.wav" type="AudioStream" id=4]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.135135, 1 )
+colors = PoolColorArray( 0, 0, 0, 0, 0.239473, 0.00506592, 0.648438, 0.501961 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 50
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_bottom = 2.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fundo" type="ColorRect" parent="."]
+margin_left = -15.6237
+margin_top = -20.6604
+margin_right = 1013.38
+margin_bottom = 589.34
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="fundo"]
+position = Vector2( 507.536, 494.868 )
+scale = Vector2( 3.53019, 3.53019 )
+texture = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.589
+anchor_right = 0.589
+margin_left = -253.149
+margin_top = 663.802
+margin_right = 417.851
+margin_bottom = 987.802
+rect_rotation = -90.0
+texture = SubResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 289.387
+margin_top = 102.017
+margin_right = 703.387
+margin_bottom = 249.017
+rect_pivot_offset = Vector2( -730.957, -243.316 )
+custom_fonts/font = SubResource( 3 )
+text = "Gameover"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 2.0
+margin_top = 332.301
+margin_right = 1000.0
+margin_bottom = 479.301
+rect_pivot_offset = Vector2( -730.957, -243.316 )
+custom_fonts/font = SubResource( 4 )
+text = "press space to retry"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -16.289
+autoplay = true

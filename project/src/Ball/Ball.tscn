@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/Ball/Ball.gd" type="Script" id=1]
 [ext_resource path="res://assets/Sprites/Ball/Bola.png" type="Texture" id=2]
-[ext_resource path="res://src/ObserverSound/AudioController.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Observers/AudioController.tscn" type="PackedScene" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

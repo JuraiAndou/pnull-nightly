@@ -2,7 +2,6 @@ extends KinematicBody2D
 
 export var speed = 500
 var lifes = 3
-var retries = 3
 
 var screen_size
 onready var up_hit = get_node("Player_hit_up")
@@ -24,6 +23,8 @@ signal up_kick_signal
 signal hit
 #sinal para o som
 signal play_sound (som)
+#sinal de perdeu as vidas
+signal death
 
 
 func _process(delta):
@@ -69,6 +70,9 @@ func _physics_process(delta):
 			_idle_state()
 		HIT:
 			_hit_state()
+			
+	if lifes < 0:
+		emit_signal("death")
 
 #State functions (O estado é corrúpto e imposto é roubo)
 func _idle_state():
@@ -152,3 +156,6 @@ func _on_Ball_hit_player():
 
 func set_hit():
 	set_state(HIT)
+
+
+

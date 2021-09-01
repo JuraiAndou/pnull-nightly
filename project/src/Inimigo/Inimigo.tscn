@@ -9,7 +9,7 @@
 [ext_resource path="res://assets/Sprites/Inimigo/inimigo_idle_7.png" type="Texture" id=7]
 [ext_resource path="res://assets/Sprites/Inimigo/inimigo_idle_6.png" type="Texture" id=8]
 [ext_resource path="res://src/Inimigo/Inimigo.gd" type="Script" id=9]
-[ext_resource path="res://src/ObserverSound/AudioController.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Observers/AudioController.tscn" type="PackedScene" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

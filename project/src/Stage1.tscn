@@ -7,7 +7,7 @@
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Ball/Ball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Inimigo/Inimigo.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/ObserverSound/AudioController.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Observers/AudioController.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/HUD/HUD.tscn" type="PackedScene" id=9]
 
 [node name="World" type="Node"]
@@ -79,85 +79,88 @@ position = Vector2( 822.355, 116.291 )
 [node name="Inimigo12" parent="Inimigos/Linha1" instance=ExtResource( 7 )]
 position = Vector2( 925.116, 174.291 )
 
-[node name="Linha 2" type="Node" parent="Inimigos"]
+[node name="Linha2" type="Node" parent="Inimigos"]
 
-[node name="Inimigo" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 145.072, 178.951 )
 
-[node name="Inimigo2" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo2" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 205.469, 217.951 )
 
-[node name="Inimigo3" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo3" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 270.876, 217.951 )
 
-[node name="Inimigo4" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo4" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 336.637, 217.951 )
 
-[node name="Inimigo5" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo5" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 400.739, 217.951 )
 
-[node name="Inimigo6" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo6" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 466.5, 188.252 )
 
-[node name="Inimigo7" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo7" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 531.907, 188.252 )
 
-[node name="Inimigo8" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo8" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 597.668, 217.951 )
 
-[node name="Inimigo9" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo9" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 665.023, 217.951 )
 
-[node name="Inimigo10" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo10" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 730.784, 217.951 )
 
-[node name="Inimigo11" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo11" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 796.192, 217.951 )
 
-[node name="Inimigo12" parent="Inimigos/Linha 2" instance=ExtResource( 7 )]
+[node name="Inimigo12" parent="Inimigos/Linha2" instance=ExtResource( 7 )]
 position = Vector2( 856.748, 174.951 )
 
-[node name="Linha 3" type="Node" parent="Inimigos"]
+[node name="Linha3" type="Node" parent="Inimigos"]
 
-[node name="Inimigo" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 105.708, 381.111 )
 
-[node name="Inimigo2" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo2" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 172.469, 334.134 )
 
-[node name="Inimigo3" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo3" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 237.876, 334.134 )
 
-[node name="Inimigo4" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo4" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 336.637, 282.134 )
 
-[node name="Inimigo5" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo5" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 400.739, 331.632 )
 
-[node name="Inimigo6" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo6" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 465.793, 363.452 )
 
-[node name="Inimigo7" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo7" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 531.907, 363.452 )
 
-[node name="Inimigo8" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo8" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 597.668, 331.632 )
 
-[node name="Inimigo9" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo9" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 665.023, 282.134 )
 
-[node name="Inimigo10" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo10" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 767.785, 335.134 )
 
-[node name="Inimigo11" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo11" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 833.192, 336.134 )
 
-[node name="Inimigo12" parent="Inimigos/Linha 3" instance=ExtResource( 7 )]
+[node name="Inimigo12" parent="Inimigos/Linha3" instance=ExtResource( 7 )]
 position = Vector2( 897.953, 386.111 )
 
+[connection signal="game_end" from="." to="HUD" method="_on_World_game_end"]
 [connection signal="play_sound" from="." to="AudioControllerMenu" method="_on_World_play_sound"]
+[connection signal="death" from="Entities/Player" to="." method="_on_Player_death"]
 [connection signal="hit" from="Entities/Player" to="HUD" method="_on_Player_hit"]
 [connection signal="play_sound" from="Entities/Player" to="AudioControllerMenu" method="_on_Player_play_sound"]
 [connection signal="up_kick_signal" from="Entities/Player" to="Entities/Ball" method="_on_Player_up_kick_signal"]
 [connection signal="hit_player" from="Entities/Ball" to="Entities/Player" method="_on_Ball_hit_player"]
 [connection signal="play_sound" from="Entities/Ball" to="AudioControllerMenu" method="_on_Ball_play_sound"]
+[connection signal="stop" from="Entities/Ball" to="." method="_on_Ball_stop"]

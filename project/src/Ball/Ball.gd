@@ -9,6 +9,7 @@ var combo = 1
 
 signal play_sound(som)
 signal hit_player()
+signal stop
 
 
 func _ready():
@@ -16,6 +17,10 @@ func _ready():
 	
 func _physics_process(delta):
 	var collision = move_and_collide(mov * spd * delta)
+	
+	#termina o fim de jogo caso a bola pare
+	if spd == 0:
+		emit_signal("stop")
 	
 	#gravidade
 	if position.y < maxHeight and spd >0:
